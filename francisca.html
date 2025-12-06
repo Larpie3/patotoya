@@ -28,10 +28,30 @@
         .delay-1 { animation-delay: 0.3s; }
         .delay-2 { animation-delay: 0.6s; }
         .delay-3 { animation-delay: 0.9s; }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: #4a3b32;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border: 1px solid #e3ddd3;
+            padding: 8px 15px;
+            background: #fff;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+        .back-btn:hover {
+            border-color: #c5a059;
+            color: #c5a059;
+        }
     </style>
 </head>
 <body style="font-family: 'Montserrat', sans-serif; background-color: #f4f1ea; color: #4a3b32; display: flex; justify-content: center; padding: 40px 20px; min-height: 100vh;">
-
+    <a href="index.html" class="back-btn">← Back to Gallery</a>
     <div class="animate-in" style="background-color: #fff; width: 100%; max-width: 1000px; padding: 60px; box-shadow: 0 15px 40px rgba(74, 59, 50, 0.08); border: 1px solid #e3ddd3; position: relative;">
         
         <div style="position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; border: 1px solid #f0efe9; pointer-events: none;"></div>
@@ -140,4 +160,5 @@
     </div>
 
 </body>
+
 </html>
