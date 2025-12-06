@@ -31,10 +31,30 @@
             -webkit-background-clip: border-box;
             background-clip: border-box;
         }
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: #888;
+            font-family: 'Raleway', sans-serif;
+            font-size: 0.9rem;
+            border: 1px solid #333;
+            padding: 8px 15px;
+            border-radius: 50px;
+            transition: 0.3s;
+            z-index: 1000;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+        }
+        .back-btn:hover {
+            border-color: #d4af37;
+            color: #d4af37;
+        }
     </style>
 </head>
 <body style="font-family: 'Raleway', sans-serif; background-color: #0f0f0f; color: #e0e0e0; display: flex; flex-direction: column; align-items: center; min-height: 100vh;">
-
+    <a href="index.html" class="back-btn">← Back to Gallery</a>
     <header style="width: 100%; max-width: 900px; text-align: center; padding: 60px 20px;">
         
         <div class="animate-up" style="position: relative; width: 160px; height: 160px; margin: 0 auto 30px auto;">
@@ -129,3 +149,4 @@
 
 </body>
 </html>
+
