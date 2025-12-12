@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liomark Matus | Dedicated Baller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary-black: #1a1a1a;
+            --pure-white: #ffffff;
+            --accent-volt: #FF7F50; /* Neon Orange / Coral for the "random color" accent */
+            --off-white: #e9e9e9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 850px;
+            background: var(--pure-white);
+            color: var(--primary-black);
+            border: 5px solid var(--accent-volt);
+            box-shadow: 0 10px 40px rgba(255, 127, 80, 0.4);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 600px;
+        }
+
+        .header-bar {
+            background-color: var(--primary-black);
+            color: var(--accent-volt);
+            padding: 25px 40px;
+            text-align: center;
+        }
+
+        .header-bar h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+        
+        .header-bar p {
+            font-size: 1rem;
+            margin: 5px 0 0 0;
+            color: var(--off-white);
+        }
+
+        /* Content Area */
+        .content-area {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 40px;
+        }
+
+        .bio-section {
+            flex: 2;
+            padding-right: 40px;
+            min-width: 300px;
+        }
+        
+        .bio-section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: var(--accent-volt);
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-black);
+            padding-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        .bio-section p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .bio-section strong {
+            color: var(--primary-black);
+            font-weight: 800;
+        }
+
+        .stats-sidebar {
+            flex: 1;
+            background-color: var(--off-white);
+            padding: 25px;
+            border-radius: 4px;
+            min-width: 250px;
+        }
+
+        .stats-sidebar h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: var(--accent-volt);
+            font-size: 1.5rem;
+            margin-top: 0;
+            border-bottom: 1px solid var(--primary-black);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #cccccc;
+        }
+        
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+
+        .stat-label {
+            font-weight: 600;
+            color: var(--primary-black);
+        }
+        
+        .stat-value {
+            font-weight: 400;
+            color: var(--accent-volt);
+            background: var(--primary-black);
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+
+        .footer-quote {
+            background-color: var(--primary-black);
+            color: var(--off-white);
+            padding: 20px 40px;
+            text-align: right;
+            border-top: 3px solid var(--accent-volt);
+            margin-top: auto;
+        }
+        
+        .footer-quote p {
+            margin: 0;
+            font-style: italic;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .content-area {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .bio-section {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            .stats-sidebar {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        
+        <header class="header-bar">
+            <h1>Liomark F. Matus</h1>
+            <p>The Player Who Plays With Heart</p>
+        </header>
+
+        <div class="content-area">
+            
+            <section class="bio-section">
+                <h2>About Me</h2>
+                <p>
+                    Hi i am <strong>Liomark F. Matus</strong>, and I am a dedicated basketball player who loves spending time on the court. I enjoy training, learning new moves, and pushing myself to get better each day. Basketball teaches me discipline, teamwork, and confidence, and it’s where I feel most like myself.
+                </p>
+                <p>
+                    Whether it’s a casual game or a real competition, I always give my best and play with heart. My passion for the game drives my motivation to stay active, work hard, and continuously improve my skills both on and off the court.
+                </p>
+
+                <div style="margin-top: 30px; border-top: 1px solid #ccc; padding-top: 20px;">
+                    <h3 style="font-family: 'Bebas Neue', sans-serif; color: var(--accent-volt); font-size: 1.8rem; margin-top: 0;">Game Footage</h3>
+                    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                                src="https://www.youtube.com/embed/n3o_I37vX40" 
+                                title="Basketball Training Highlights" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="stats-sidebar">
+                <h3>Player Profile</h3>
+                
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <img src="https://res.cloudinary.com/dyplsjcyi/image/upload/v1765507794/Messenger_creation_1FA73BA0-8215-4D86-BD56-E0DB4DF5F9DA_jxxmtg.jpg" 
+                         alt="Liomark Matus" 
+                         style="width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--accent-volt); object-fit: cover;">
+                </div>
+
+                <div class="stat-item">
+                    <span class="stat-label">Main Focus</span>
+                    <span class="stat-value">Basketball</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Core Value</span>
+                    <span class="stat-value">Discipline</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Training Hours (Weekly)</span>
+                    <span class="stat-value">Est. 15+</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Style</span>
+                    <span class="stat-value">Competitive</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Feeling on Court</span>
+                    <span class="stat-value">Myself</span>
+                </div>
+            </aside>
+
+        </div>
+
+        <footer class="footer-quote">
+            <p>"If you don't fall, how are you going to get up?"</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
