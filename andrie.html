@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrie Cabusas | Court & Cue Master</title>
-    <!-- Fonts: 'Oswald' for aggressive headers (Basketball), 'Merriweather' for strategic text (Billiards) -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
         body { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            /* Billiards Colors */
-            --billiards-green: #0F5E39; /* Deep Table Felt Green */
-            --cue-yellow: #FFD700;     /* Metallic/Brass Accent */
+            --billiards-green: #0F5E39; 
+            --cue-yellow: #FFD700;     
             
-            /* Basketball Colors */
-            --hoop-orange: #FF5722;    /* Classic Basketball Orange */
+            --hoop-orange: #FF5722;    
             --black: #1a1a1a;
             --white: #ffffff;
         }
@@ -32,7 +29,6 @@
             padding: 20px;
         }
 
-        /* Main Profile Container - Split Design */
         .profile-container {
             width: 100%;
             max-width: 950px;
@@ -44,7 +40,6 @@
             grid-template-columns: 1fr 1fr; /* Split into two columns */
         }
 
-        /* Left Side: Basketball Theme */
         .left-side {
             background-color: var(--hoop-orange);
             color: var(--white);
@@ -75,7 +70,6 @@
             animation: pulse 2s infinite;
         }
 
-        /* Right Side: Billiards Theme */
         .right-side {
             background-color: var(--billiards-green);
             color: var(--white);
@@ -100,9 +94,9 @@
             font-weight: 300;
         }
 
-        /* Middle Content (The Fusion) */
+
         .main-bio-section {
-            grid-column: 1 / 3; /* Spans both columns */
+            grid-column: 1 / 3; 
             padding: 40px 60px;
             background-color: var(--white);
         }
@@ -137,7 +131,6 @@
             color: var(--billiards-green);
         }
         
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -164,7 +157,6 @@
             color: var(--cue-yellow);
         }
 
-        /* Animations */
         @keyframes pulse {
             0% { transform: scale(1); opacity: 0.8; }
             50% { transform: scale(1.1); opacity: 1; }
@@ -183,7 +175,6 @@
 
     <div class="profile-container">
         
-        <!-- LEFT SIDE: BASKETBALL FOCUS -->
         <div class="left-side">
             <div class="basketball-icon">🏀</div>
             <h1>Andrie F. Cabusas</h1>
@@ -196,7 +187,6 @@
             </div>
         </div>
 
-        <!-- RIGHT SIDE: BILLIARDS FOCUS -->
         <div class="right-side">
             <div style="font-size: 3rem; margin-top: 20px;">🎱</div>
             <h2 style="font-family: 'Merriweather', serif;">The 8-Ball Strategist</h2>
@@ -212,7 +202,6 @@
             </div>
         </div>
 
-        <!-- MAIN BIO: THE FUSION -->
         <div class="main-bio-section">
             <h3>Ready for the Challenge</h3>
             <div class="bio-text">
