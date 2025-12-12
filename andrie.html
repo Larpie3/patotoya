@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrie Cabusas | Court & Cue Master</title>
+    <!-- Fonts: 'Oswald' for aggressive headers (Basketball), 'Merriweather' for strategic text (Billiards) -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            /* Billiards Colors */
+            --billiards-green: #0F5E39; /* Deep Table Felt Green */
+            --cue-yellow: #FFD700;     /* Metallic/Brass Accent */
+            
+            /* Basketball Colors */
+            --hoop-orange: #FF5722;    /* Classic Basketball Orange */
+            --black: #1a1a1a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f0f0f0;
+            color: var(--black);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Main Profile Container - Split Design */
+        .profile-container {
+            width: 100%;
+            max-width: 950px;
+            background: var(--white);
+            box-shadow: 0 15px 45px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Split into two columns */
+        }
+
+        /* Left Side: Basketball Theme */
+        .left-side {
+            background-color: var(--hoop-orange);
+            color: var(--white);
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .left-side h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .left-side .subtitle {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            opacity: 0.9;
+        }
+
+        .basketball-icon {
+            font-size: 3rem;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+
+        /* Right Side: Billiards Theme */
+        .right-side {
+            background-color: var(--billiards-green);
+            color: var(--white);
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .right-side h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            margin-top: 0;
+            color: var(--cue-yellow);
+            border-bottom: 2px solid var(--cue-yellow);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .right-side .key-strength {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            font-weight: 300;
+        }
+
+        /* Middle Content (The Fusion) */
+        .main-bio-section {
+            grid-column: 1 / 3; /* Spans both columns */
+            padding: 40px 60px;
+            background-color: var(--white);
+        }
+
+        .main-bio-section h3 {
+            font-family: 'Oswald', sans-serif;
+            color: var(--billiards-green);
+            font-size: 2rem;
+            border-bottom: 3px solid var(--hoop-orange);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .bio-text {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #444;
+        }
+        
+        .bio-text strong {
+            color: var(--hoop-orange);
+            font-weight: 700;
+        }
+        
+        .challenge-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-style: italic;
+            color: var(--billiards-green);
+        }
+        
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .skill-card {
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .skill-card.basketball {
+            background-color: var(--hoop-orange);
+            color: var(--white);
+        }
+        
+        .skill-card.billiards {
+            background-color: var(--billiards-green);
+            color: var(--cue-yellow);
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        @media (max-width: 768px) {
+            .profile-container { grid-template-columns: 1fr; }
+            .main-bio-section { grid-column: 1 / 2; padding: 30px; }
+            .left-side, .right-side { padding: 30px 20px; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        
+        <!-- LEFT SIDE: BASKETBALL FOCUS -->
+        <div class="left-side">
+            <div class="basketball-icon">🏀</div>
+            <h1>Andrie F. Cabusas</h1>
+            <p class="subtitle">The Hoop Dreamer</p>
+            
+            <div style="width: 100%; height: 180px; margin-top: 20px; background: rgba(0,0,0,0.2); border-radius: 5px; overflow: hidden;">
+                <img src="https://placehold.co/300x180/FF5722/FFFFFF?text=COURT+ACTION" 
+                     alt="Basketball Court" 
+                     style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE: BILLIARDS FOCUS -->
+        <div class="right-side">
+            <div style="font-size: 3rem; margin-top: 20px;">🎱</div>
+            <h2 style="font-family: 'Merriweather', serif;">The 8-Ball Strategist</h2>
+            <div style="margin-top: 20px;">
+                <p class="key-strength">Key Strength: **Precision**</p>
+                <p class="key-strength">Key Strength: **Strategy**</p>
+                <p class="key-strength">Key Strength: **Focus**</p>
+            </div>
+            <div style="width: 100%; height: 180px; margin-top: 20px; background: rgba(0,0,0,0.2); border-radius: 5px; overflow: hidden;">
+                <img src="https://placehold.co/300x180/0F5E39/FFD700?text=CUE+SKILL" 
+                     alt="Billiards Table" 
+                     style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+            </div>
+        </div>
+
+        <!-- MAIN BIO: THE FUSION -->
+        <div class="main-bio-section">
+            <h3>Ready for the Challenge</h3>
+            <div class="bio-text">
+                <p>
+                    I’m <strong>Andrie F. Cabusas</strong>, a passionate athlete who’s always ready for a challenge—on the basketball court and on the billiards table. I love practicing, improving my skills, and competing with people who bring the same energy.
+                </p>
+                <p>
+                    Aside from basketball, I’m also skilled in <strong>8-ball billiards</strong>, where precision, strategy, and focus matter just as much as they do in sports. Whether I’m lining up a perfect shot or driving to the hoop, I’m motivated to stay sharp, work hard, and keep growing every day.
+                </p>
+                <p class="challenge-box">
+                    Every game—whether it’s basketball or 8-ball—is a chance to learn something new, and I’m always striving to level up my performance and become the best player I can be.
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card basketball">
+                    <span style="font-size: 1.5rem;">🏀</span> TEAMWORK & ENDURANCE
+                </div>
+                <div class="skill-card billiards">
+                    <span style="font-size: 1.5rem;">🧠</span> PRECISION & STRATEGY
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
