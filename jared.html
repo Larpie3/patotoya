@@ -3,146 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venz Jared P. Bacus| Seaman of The Philippines</title>
+    <title>Venz Jared P. Bacus | Future Seaman</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <style>
         body { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --peace-green: #E3242B;
-            --deep-forest: #900603;
+            --maritime-red: #E3242B;
+            --deep-crimson: #900603;
+            --deck-gray: #f4f4f4;
+            --slate-dark: #2c3e50;
             --pure-white: #ffffff;
-            --soft-gray: #f9f9f9;
         }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--deck-gray);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            width: 100%;
+            max-width: 1100px;
+            background: var(--pure-white);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            overflow: hidden;
+            min-height: 700px;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, var(--deep-crimson), var(--maritime-red));
+            color: var(--pure-white);
+            padding: 40px 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .sidebar::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.05) 10px, rgba(0,0,0,0.05) 20px);
+            pointer-events: none;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .rank-badge {
+            background: rgba(0,0,0,0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .name-block h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.2rem;
+            margin: 0;
+            line-height: 1.1;
+            text-transform: uppercase;
+        }
+
+        .name-block p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        .stats-box {
+            margin-top: auto;
+            width: 100%;
+            background: rgba(0,0,0,0.2);
+            border-radius: 8px;
+            padding: 15px;
+            text-align: left;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 8px 0;
+            font-size: 0.85rem;
+        }
+        .stat-row:last-child { border-bottom: none; }
+
+        .main-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-bar {
+            border-bottom: 3px solid var(--maritime-red);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-bar h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            color: var(--deep-crimson);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .id-number {
+            font-family: 'Roboto', monospace;
+            color: #888;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .bio-text {
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+            margin-bottom: 40px;
+        }
+
+        .bio-text strong {
+            color: var(--maritime-red);
+        }
+
+        .lower-deck {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: auto;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+
+        .motto-card {
+            background: var(--maritime-red);
+            color: white;
+            padding: 30px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .motto-card::before {
+            content: '⚓';
+            position: absolute;
+            font-size: 10rem;
+            color: rgba(255,255,255,0.1);
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .motto-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            line-height: 1.4;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 800px) {
+            .container { grid-template-columns: 1fr; }
+            .sidebar { padding: 40px 20px; }
+            .lower-deck { grid-template-columns: 1fr; }
+            .main-content { padding: 30px; }
+        }
+
+        @keyframes fadeIn {
             to { opacity: 1; transform: translateY(0); }
         }
-
-        .animate-up { animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; opacity: 0; }
-        .delay-1 { animation-delay: 0.3s; }
-        .delay-2 { animation-delay: 0.5s; }
-        .delay-3 { animation-delay: 0.7s; }
-
-        .mission-card {
-            background: linear-gradient(135deg, var(--pure-white), #f1f8e9);
-            border-left: 5px solid var(--peace-green);
-            padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 5px 20px rgba(85, 139, 47, 0.15);
-            border-radius: 0 10px 10px 0;
+        .animate-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease-out forwards;
         }
     </style>
 </head>
-<body style="font-family: 'Oswald', sans-serif; background-color: #f1f8e9; color: #333; display: flex; flex-direction: column; align-items: center; min-height: 100vh;">
+<body>
 
-    
-    <div style="width: 100%; max-width: 900px; background: var(--pure-white); margin: 60px 20px; box-shadow: 0 20px 50px rgba(27, 94, 32, 0.1); border-radius: 12px; overflow: hidden;">
+    <div class="container">
         
-        
-        <div style="background: linear-gradient(135deg, var(--deep-forest), var(--peace-green)); padding: 80px 40px; text-align: center; color: var(--pure-white); position: relative; overflow: hidden;">
+        <aside class="sidebar">
+            <div class="rank-badge">Grade 9 Student</div>
             
-            <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; border-radius: 50%; background: rgba(255,255,255,0.05);"></div>
-            <div style="position: absolute; bottom: -30px; right: -30px; width: 150px; height: 150px; border-radius: 50%; background: rgba(255,255,255,0.08);"></div>
-
-            <div class="animate-up" style="position: relative; width: 160px; height: 160px; margin: 0 auto 25px auto; border-radius: 50%; border: 4px solid rgba(255,255,255,0.3); padding: 5px;">
-                <div style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: #fff;">
-                    <!-- Placeholder for Charles -->
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
-                         alt="Charles Xander" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
+            <img src="https://images.unsplash.com/photo-1543871595-e11129f271cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+                 alt="Venz Jared P. Bacus" 
+                 class="profile-img animate-in" style="animation-delay: 0.1s;">
+            
+            <div class="name-block animate-in" style="animation-delay: 0.2s;">
+                <h1>Venz Jared<br>P. Bacus</h1>
+                <p>Aspiring Seaman</p>
             </div>
 
-            <h1 class="animate-up delay-1" style="font-family: 'Cinzel', serif; font-size: 3rem; margin: 0; letter-spacing: 2px;">
-                Charles Xander<br><span style="font-size: 1.5rem; opacity: 0.9; font-weight: 400;">Z. Bastasa</span>
-            </h1>
-            
-            <p class="animate-up delay-1" style="font-size: 1rem; letter-spacing: 4px; text-transform: uppercase; margin-top: 15px; border-top: 1px solid rgba(255,255,255,0.3); display: inline-block; padding-top: 15px;">
-                Future Seaman
-            </p>
-        </div>
+            <div class="stats-box animate-in" style="animation-delay: 0.3s;">
+                <div class="stat-row">
+                    <span>Nationality</span>
+                    <strong>Filipino</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Status</span>
+                    <strong>Student</strong>
+                </div>
+                <div class="stat-row">
+                    <span>Passion</span>
+                    <strong>Basketball & Maritime</strong>
+                </div>
+            </div>
+        </aside>
 
-        <!-- CONTENT SECTION -->
-        <div style="padding: 60px 50px;">
+        <main class="main-content">
             
-            <!-- The Vision (Improved 100x) -->
-            <div class="animate-up delay-2">
-                <h2 style="font-family: 'Cinzel', serifvar(--deep-forest); font-size: 2rem; margin-bottom: 30px; text-align: center;">
-                    The Vision
-                </h2>
-                
-                <p style="font-size: 1.2rem; line-height: 1.8; text-align: center; color: #555; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                    "I dream of a world where boundaries dissolve, not to divide us, but to reveal the common ground of our humanity."
+            <div class="header-bar animate-in" style="animation-delay: 0.4s;">
+                <h2>My Journey Log</h2>
+                <span class="id-number">ID: 2025-VJB</span>
+            </div>
+
+            <div class="bio-text animate-in" style="animation-delay: 0.5s;">
+                <p>
+                    Hi! I’m <strong>Venz Jared P. Bacus</strong>, and <strong>basketball</strong> is one of the biggest parts of my life. Whether I’m practicing my skills, playing with friends, or competing on the court, the game keeps me motivated to stay active, work hard, and improve every day. I love being part of a team, facing challenges, and giving my best in every match.
                 </p>
-
-                <div class="mission-card">
-                    <h3 style="font-family: 'Cinzel', serif; color: var(--peace-green); margin-top: 0;">A Catalyst for Change</h3>
-                    <p style="line-height: 1.7; color: #444; text-align: justify;">
-                        My name is <strong>Charles Xander Z. Bastasa</strong>, and I am driven by a singular, powerful ambition: to dismantle the structures of violence and discrimination that plague our society. I believe that peace is not merely the absence of war, but the active presence of justice and equality.
-                    </p>
-                    <p style="line-height: 1.7; color: #444; text-align: justify; margin-top: 15px;">
-                        Witnessing the disparities in our world ignited a fire within me. Instead of standing idly by, I chose to act. I developed a digital platform—a website dedicated to bridging divides, educating minds, and fostering a community where every individual is treated with the dignity they inherently deserve.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Core Pillars -->
-            <div class="animate-up delay-3" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 50px;">
-                
-                <div style="text-align: center; padding: 30px; background: #fff; border: 1px solid #eee; border-radius: 8px; transition: transform 0.3s;">
-                    <div style="font-size: 2.5rem; color: var(--peace-green); margin-bottom: 15px;">🕊️</div>
-                    <h3 style="color: var(--deep-forest); font-family: 'Cinzel', serif; margin: 0 0 10px 0;">Peace</h3>
-                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;"> Advocating for non-violent conflict resolution and understanding.</p>
-                </div>
-
-                <div style="text-align: center; padding: 30px; background: #fff; border: 1px solid #eee; border-radius: 8px; transition: transform 0.3s;">
-                    <div style="font-size: 2.5rem; color: var(--peace-green); margin-bottom: 15px;">⚖️</div>
-                    <h3 style="color: var(--deep-forest); font-family: 'Cinzel', serif; margin: 0 0 10px 0;">Equality</h3>
-                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">Championing equal rights and opportunities for all, regardless of background.</p>
-                </div>
-
-                <div style="text-align: center; padding: 30px; background: #fff; border: 1px solid #eee; border-radius: 8px; transition: transform 0.3s;">
-                    <div style="font-size: 2.5rem; color: var(--peace-green); margin-bottom: 15px;">🌐</div>
-                    <h3 style="color: var(--deep-forest); font-family: 'Cinzel', serif; margin: 0 0 10px 0;">Action</h3>
-                    <p style="font-size: 0.9rem; color: #666; line-height: 1.6;">Using technology to build tools that help realize these dreams.</p>
-                </div>
-
-            </div>
-
-            <!-- Digital Initiative (Website Mention) -->
-            <div class="animate-up delay-3" style="margin-top: 60px; text-align: center;">
-                <h3 style="font-family: 'Cinzel', serif; color: var(--deep-forest); font-size: 1.5rem; margin-bottom: 20px;">
-                    The Digital Initiative
-                </h3>
-                <p style="color: #666; margin-bottom: 30px;">
-                    A platform designed to educate and unite.
+                <p>
+                    I’m also working toward my dream of becoming a <strong>future seaman</strong>. Just like basketball, it inspires me to stay disciplined, focused, and committed to my goals. I’m excited for the journey ahead—both on the court and out at sea.
                 </p>
-                
-                <!-- Placeholder for Website Preview / Video -->
-                <div style="position: relative; width: 100%; max-width: 600px; margin: 0 auto; padding: 10px; border: 1px solid #e0e0e0; border-radius: 4px; background: #fff;">
-                     <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #f0f0f0; border-radius: 2px;">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                                src="https://www.youtube.com/embed/Zz_pP9G0pQ4" 
-                                title="Global Peace Initiative" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                        </iframe>
+            </div>
+
+            <div class="lower-deck animate-in" style="animation-delay: 0.6s;">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/S9043l3r8oM" 
+                            title="Maritime Inspiration" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="motto-card">
+                    <div class="motto-text">
+                        "Smooth seas do not make skillful sailors."
                     </div>
                 </div>
             </div>
 
-        </div>
-
-        <div style="background-color: var(--deep-forest); color: rgba(255,255,255,0.7); padding: 30px; text-align: center; font-size: 0.85rem;">
-            <p style="margin-bottom: 10px; font-style: italic;">"Be the change you wish to see in the world."</p>
-            &copy; 2025 Venz Jared P. Bacus. Future Seaman.
-        </div>
+        </main>
 
     </div>
 
