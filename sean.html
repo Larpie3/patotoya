@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Nigel B. Perez | The Disciplined Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --royal-purple: #4A148C;
+            --light-purple: #7B1FA2;
+            --gold-start: #FFD700;
+            --gold-end: #CCAC00;
+            --paper-bg: #EBE0FF;
+            --dark-text: #212121;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--paper-bg);
+            color: var(--dark-text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .profile-wrapper {
+            width: 100%;
+            max-width: 900px;
+            background-color: var(--paper-bg);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            border: 2px solid var(--light-purple);
+        }
+
+        .header {
+            padding: 40px;
+            background: linear-gradient(135deg, var(--gold-start), var(--gold-end));
+            color: var(--royal-purple);
+            border-bottom: 3px solid var(--royal-purple);
+        }
+        
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            line-height: 1.1;
+            font-weight: 700;
+            color: var(--royal-purple);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            margin-top: 8px;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        .avatar-box {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--royal-purple);
+            box-shadow: 0 0 10px rgba(74, 20, 140, 0.5);
+        }
+        .avatar-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        .content-table td {
+            padding: 40px;
+            vertical-align: top;
+        }
+        .content-table .bio-cell {
+            width: 66%;
+        }
+        .content-table .sidebar-cell {
+            width: 34%;
+        }
+
+        @media (max-width: 768px) {
+            .content-table, .content-table tbody, .content-table tr, .content-table td {
+                display: block;
+                width: 100%;
+            }
+            .content-table td {
+                padding: 20px;
+            }
+            .content-table .bio-cell, .content-table .sidebar-cell {
+                width: 100%;
+            }
+        }
+
+        .bio-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: var(--royal-purple);
+            margin-top: 0;
+            border-bottom: 2px solid var(--light-purple);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .bio-text p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: var(--dark-text);
+            text-align: justify;
+        }
+
+        .bio-text strong {
+            color: var(--royal-purple);
+            font-weight: 800;
+        }
+
+        .interests-sidebar {
+            background-color: var(--light-purple);
+            padding: 25px;
+            border-radius: 8px;
+            color: var(--paper-bg);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+            height: 100%;
+        }
+
+        .interests-sidebar h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-start);
+            border-bottom: 2px solid var(--gold-start);
+            padding-bottom: 5px;
+        }
+
+        .interests-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .interests-table tr:not(:last-child) td {
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .interests-table td {
+            padding: 0;
+            vertical-align: top;
+        }
+        .interests-table .icon-cell {
+            width: 30px;
+            padding-right: 15px;
+            color: var(--gold-start);
+            font-size: 1.5rem;
+        }
+        .interests-table .text-cell {
+            padding-bottom: 20px;
+        }
+        .interests-table .text-cell p {
+            margin: 0;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+        
+        .video-section-cell {
+            padding: 40px;
+            text-align: center;
+            background-color: #f7f3ff;
+            border-top: 1px solid #d4c0f8;
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
+        .video-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--royal-purple);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: var(--royal-purple);
+            color: var(--gold-start);
+            padding: 15px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-wrapper">
+        
+        <header class="header">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td style="text-align: center;">
+                        <div class="avatar-box">
+                            <img src="https://res.cloudinary.com/dyplsjcyi/image/upload/v1765705430/sean_z1bgbp.jpg" alt="Sean Nigel B. Perez Profile">
+                        </div>
+                        <h1>Sean Nigel B. Perez</h1>
+                        <p>Curious Minded and Hardworking Student</p>
+                    </td>
+                </tr>
+            </table>
+        </header>
+
+        <table class="content-table" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td class="bio-cell">
+                    <section class="bio-section">
+                        <h2>My Drive & Discipline</h2>
+                        <div class="bio-text">
+                            <p>
+                                I am a <strong>curious minded</strong> and <strong>hardworking student</strong>. This dedication defines my approach to everything, from my academics to my personal passions. I thrive on seeking knowledge and applying myself fully to every task.
+                            </p>
+                            <p>
+                                My favorite sport is <strong>basketball</strong>. For me, the court is where discipline meets determination. The sport is not just about scoring; it's about the focus, practice, and continuous improvement that comes with the game.
+                            </p>
+                        </div>
+
+                        <h2>Spiritual & Intellectual Life</h2>
+                        <div class="bio-text">
+                            <p>
+                                Spiritually, I am committed as an <strong>altar server</strong>. Every Sunday, I have the profound responsibility of serving with my team and the priest. This role emphasizes teamwork, reliability, and reverence, qualities I bring to all aspects of my life.
+                            </p>
+                            <p>
+                                My favorite hobby is <strong>reading</strong>, especially novels and encyclopedias. I love getting lost in fictional worlds and, simultaneously, diving deep into facts and general knowledge. This intellectual curiosity is what fuels my other great passion: to <strong>explore</strong>.
+                            </p>
+                        </div>
+                    </section>
+                </td>
+
+                <td class="sidebar-cell">
+                    <aside class="interests-sidebar">
+                        <h3>Key Roles & Focus</h3>
+                        
+                        <table class="interests-table" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td class="icon-cell">📖</td>
+                                <td class="text-cell">
+                                    <p style="font-weight: 600;">Intellectual Exploration</p>
+                                    <p>Driven by curiosity, enjoying both imaginative novels and factual encyclopedias.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="icon-cell">🏀</td>
+                                <td class="text-cell">
+                                    <p style="font-weight: 600;">Basketball Player</p>
+                                    <p>Focusing on discipline, skill-building, and high-level performance.</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="icon-cell">🕯️</td>
+                                <td class="text-cell">
+                                    <p style="font-weight: 600;">Altar Server</p>
+                                    <p>Serving on Sundays, embodying reliability and teamwork within the church.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </aside>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="video-section-cell">
+                    <div class="video-title">My Passion: The Drive to Explore</div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLD08D38D91D0E4631" 
+                                title="Exploration & Curiosity" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <footer class="footer">
+            Dedicated to Growth, Service, and Knowledge.
+        </footer>
+
+    </div>
+
+</body>
+</html>
