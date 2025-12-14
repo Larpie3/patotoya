@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kobe Erediano | Artist & Automotive Enthusiast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --dark-background: #101522; 
+            --main-dark-blue: #1C2746; 
+            --light-blue: #4A90E2;      
+            --electric-blue: #00FFFF;   
+            --white-text: #E0E0E0;
+            --secondary-text: #99A9C9;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-background);
+            color: var(--white-text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--main-dark-blue);
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            border: 2px solid var(--light-blue);
+        }
+
+        /* Header Section */
+        .header {
+            padding: 40px 30px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--main-dark-blue), var(--dark-background));
+            position: relative;
+        }
+        
+        .header h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2.8rem;
+            margin: 0;
+            color: var(--electric-blue);
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        
+        .header p {
+            font-size: 1rem;
+            margin-top: 5px;
+            color: var(--secondary-text);
+            font-weight: 400;
+        }
+
+        .avatar-frame {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            padding: 3px;
+            border: 3px solid var(--light-blue);
+            box-shadow: 0 0 15px rgba(74, 144, 226, 0.5);
+            background-color: var(--dark-background);
+        }
+
+        .avatar-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Content Area */
+        .content-area {
+            padding: 40px;
+            background-color: var(--dark-background);
+        }
+        
+        .section-title {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.6rem;
+            color: var(--electric-blue);
+            border-bottom: 2px solid var(--light-blue);
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bio-text {
+            line-height: 1.7;
+            font-size: 0.95rem;
+            color: var(--white-text);
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+        
+        .bio-text strong {
+            color: var(--electric-blue);
+        }
+
+        /* Interests Grid */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .interest-card {
+            background-color: var(--main-dark-blue);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--light-blue);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .interest-card:hover {
+            background-color: rgba(74, 144, 226, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+        }
+
+        .interest-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--electric-blue);
+        }
+
+        .interest-card h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.2rem;
+            margin: 0;
+            color: var(--white-text);
+        }
+        
+        .footer {
+            background-color: var(--dark-background);
+            border-top: 1px solid var(--light-blue);
+            color: var(--secondary-text);
+            padding: 15px;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        
+        <header class="header">
+            <div class="avatar-frame">
+                <img src="https://res.cloudinary.com/dyplsjcyi/image/upload/v1765691019/6876c3d5-861b-4ee9-8c6b-fe350c12999d_nkb7yx.jpg" alt="Kobe Profile Picture">
+            </div>
+            <h1>Kobe Dedrick M. Erediano</h1>
+            <p>Grade 9 - Claude Debussy</p>
+        </header>
+
+        <main class="content-area">
+            
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="bio-text">
+                <p>
+                    Helloo everyone!!!, my name is <strong>Kobe Dedrick M. Erediano</strong> and I'm from Grade 9 Claude Debussy. My world is colored in shades of <strong>blue and black</strong>, perfectly matching my diverse passions for art, engineering, and speed.
+                </p>
+                <p>
+                    I find immense satisfaction in two main areas: <strong>drawing</strong>, where creativity flows freely, and <strong>building</strong> complex structures, particularly with Lego sets. I am a major enthusiast of <strong>cars</strong>, with <strong>Porsche</strong> being my absolute favorite brand—I admire their design, engineering, and performance. Whether I'm sketching a new design or meticulously snapping bricks together, I am driven by precision and a love for well-crafted excellence.
+                </p>
+            </div>
+            
+            <h2 class="section-title">My Passions</h2>
+            
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="icon">✏️</div>
+                    <h3>Drawing</h3>
+                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Expressing creativity and refining technique.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="icon">🏎️</div>
+                    <h3>Porsche Enthusiast</h3>
+                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Admirer of automotive engineering and design.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="icon">🧱</div>
+                    <h3>Lego Building</h3>
+                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Focusing on precision and structural assembly.</p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            Driven by creativity and precision.
+        </footer>
+
+    </div>
+
+</body>
+</html>
