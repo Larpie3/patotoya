@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Andrei Pahayahay | Student & Gamer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F8F8; 
+        }
+        
+        .profile-card {
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 1rem;
+            border: 1px solid #E5E7EB; 
+        }
+
+        
+        .text-primary-gray { color: #4A4E69; }
+        .bg-accent-gray { background-color: #6C757D; }
+        .text-accent-cyan { color: #81C7D4; } 
+        .border-accent-cyan { border-color: #81C7D4; }
+
+        
+        .info-table th, .info-table td {
+            padding: 12px 0;
+            text-align: left;
+        }
+
+        .info-table th {
+            font-weight: 600;
+            color: #6C757D; 
+            width: 40%;
+        }
+        
+        
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 min-h-screen flex justify-center items-start">
+
+    <div class="w-full max-w-3xl mt-10 profile-card">
+        
+        
+        <header class="p-6 md:p-10 text-center bg-gray-50 rounded-t-xl border-b border-gray-200">
+            <div class="relative inline-block p-1 border-4 border-accent-cyan rounded-full bg-white shadow-lg">
+                <img src="https://res.cloudinary.com/dyplsjcyi/image/upload/v1765811085/kyle_igjk8z.jpg" 
+                     alt="Kyle Andrei Pahayahay Profile" 
+                     class="w-32 h-32 object-cover rounded-full">
+                <span class="absolute bottom-1 right-1 h-5 w-5 bg-accent-cyan rounded-full border-2 border-white"></span>
+            </div>
+            <h1 class="mt-4 text-3xl md:text-4xl font-extrabold text-primary-gray">Kyle Andrei Pahayahay</h1>
+            <p class="mt-1 text-lg font-medium text-gray-500">Student | Focused on Growth</p>
+        </header>
+
+        
+        <main class="p-6 md:p-10 space-y-8">
+            
+            <section class="bg-white p-6 rounded-lg border border-gray-100 shadow-md">
+                <h2 class="text-2xl font-bold text-primary-gray border-b-2 border-accent-cyan pb-2 mb-4">About Me</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Hi! My name is <strong>Kyle Andrei Pahayahay</strong>, I’m 15 years old and I live in Minglanilla, Cebu, Philippines. I currently study at SCC. 
+                    I like a clean and simple style, which is why my preferred color theme is gray. I’m still learning and growing, always open to new experiences and interests.
+                </p>
+            </section>
+
+            
+            <section class="p-6 bg-gray-50 rounded-lg border border-gray-200">
+                <h2 class="text-xl font-bold text-primary-gray mb-3">Key Details</h2>
+                <table class="w-full info-table">
+                    <tbody>
+                        <tr class="border-b border-gray-200">
+                            <th>Age</th>
+                            <td class="text-gray-700">15 years old</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th>Location</th>
+                            <td class="text-gray-700">Minglanilla, Cebu, Philippines</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <th>School</th>
+                            <td class="text-gray-700">SCC (Student)</td>
+                        </tr>
+                        <tr>
+                            <th>Style Preference</th>
+                            <td class="text-gray-700">Clean, Simple, Gray Theme</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            
+            <section class="p-6 bg-white rounded-lg border border-gray-100 shadow-md">
+                <h2 class="text-2xl font-bold text-primary-gray border-b-2 border-accent-cyan pb-2 mb-4">My Free Time & Focus</h2>
+                
+                <p class="text-gray-600 mb-6">
+                    In my free time, I enjoy playing <strong>Roblox</strong>, where I have fun exploring games, building, and connecting with other players. It's a great platform for creativity and meeting new people.
+                </p>
+                
+                
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/4j1jh0VBgeo?si=Gadg89HBxjIYAtI2" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+                <p class="mt-4 text-center text-sm text-gray-500 italic">
+                    Highlight Reel: A look back at my previous school project presentation.
+                </p>
+            </section>
+
+        </main>
+
+        
+        <footer class="p-4 text-center bg-gray-700 rounded-b-xl text-gray-300 text-sm">
+            &copy; 2024 Kyle Andrei Pahayahay. Built with a minimalist gray aesthetic.
+        </footer>
+
+    </div>
+</body>
+</html>
+
