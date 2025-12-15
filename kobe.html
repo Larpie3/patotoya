@@ -10,10 +10,10 @@
         body { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --dark-background: #101522; 
-            --main-dark-blue: #1C2746; 
-            --light-blue: #4A90E2;      
-            --electric-blue: #00FFFF;   
+            --dark-background: #101522;
+            --main-dark-blue: #1C2746;
+            --light-blue: #4A90E2;
+            --electric-blue: #00FFFF;
             --white-text: #E0E0E0;
             --secondary-text: #99A9C9;
         }
@@ -39,7 +39,6 @@
             border: 2px solid var(--light-blue);
         }
 
-        /* Header Section */
         .header {
             padding: 40px 30px;
             text-align: center;
@@ -81,7 +80,6 @@
             object-fit: cover;
         }
 
-        /* Content Area */
         .content-area {
             padding: 40px;
             background-color: var(--dark-background);
@@ -110,7 +108,6 @@
             color: var(--electric-blue);
         }
 
-        /* Interests Grid */
         .interests-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -153,60 +150,107 @@
             text-align: center;
             font-size: 0.8rem;
         }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
 
-    <div class="profile-container">
+    <table class="profile-container" cellpadding="0" cellspacing="0">
         
-        <header class="header">
-            <div class="avatar-frame">
-                <img src="https://res.cloudinary.com/dyplsjcyi/image/upload/v1765691019/6876c3d5-861b-4ee9-8c6b-fe350c12999d_nkb7yx.jpg" alt="Kobe Profile Picture">
-            </div>
-            <h1>Kobe Dedrick M. Erediano</h1>
-            <p>Grade 9 - Claude Debussy</p>
-        </header>
+        <tr>
+            <td colspan="1">
+                <header class="header">
+                    <div class="avatar-frame">
+                        <img src="https://res.cloudinary.com/dyplsjcyi/image/upload/v1765691019/6876c3d5-861b-4ee9-8c6b-fe350c12999d_nkb7yx.jpg" alt="Kobe Profile Picture">
+                    </div>
+                    <h1>Kobe Dedrick M. Erediano</h1>
+                    <p>Grade 9 - Claude Debussy</p>
+                </header>
+            </td>
+        </tr>
 
-        <main class="content-area">
-            
-            <h2 class="section-title">About Me</h2>
-            
-            <div class="bio-text">
-                <p>
-                    Helloo everyone!!!, my name is <strong>Kobe Dedrick M. Erediano</strong> and I'm from Grade 9 Claude Debussy. My world is colored in shades of <strong>blue and black</strong>, perfectly matching my diverse passions for art, engineering, and speed.
-                </p>
-                <p>
-                    I find immense satisfaction in two main areas: <strong>drawing</strong>, where creativity flows freely, and <strong>building</strong> complex structures, particularly with Lego sets. I am a major enthusiast of <strong>cars</strong>, with <strong>Porsche</strong> being my absolute favorite brand—I admire their design, engineering, and performance. Whether I'm sketching a new design or meticulously snapping bricks together, I am driven by precision and a love for well-crafted excellence.
-                </p>
-            </div>
-            
-            <h2 class="section-title">My Passions</h2>
-            
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <div class="icon">✏️</div>
-                    <h3>Drawing</h3>
-                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Expressing creativity and refining technique.</p>
-                </div>
-                <div class="interest-card">
-                    <div class="icon">🏎️</div>
-                    <h3>Porsche Enthusiast</h3>
-                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Admirer of automotive engineering and design.</p>
-                </div>
-                <div class="interest-card">
-                    <div class="icon">🧱</div>
-                    <h3>Lego Building</h3>
-                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Focusing on precision and structural assembly.</p>
-                </div>
-            </div>
+        <tr>
+            <td colspan="1">
+                <main class="content-area">
+                    
+                    <h2 class="section-title">Video Introduction</h2>
+                    
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/Oi06GmbpQmM?si=x13RpuuB5uiWrBk0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
 
-        </main>
+                    <h2 class="section-title">About Me</h2>
+                    
+                    <table class="bio-text" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <p>
+                                    Helloo everyone!!!, my name is <strong>Kobe Dedrick M. Erediano</strong> and I'm from Grade 9 Claude Debussy. My world is colored in shades of <strong>blue and black</strong>, perfectly matching my diverse passions for art, engineering, and speed.
+                                </p>
+                                <p>
+                                    I find immense satisfaction in two main areas: <strong>drawing</strong>, where creativity flows freely, and <strong>building</strong> complex structures, particularly with Lego sets. I am a major enthusiast of <strong>cars</strong>, with <strong>Porsche</strong> being my absolute favorite brand—I admire their design, engineering, and performance. Whether I'm sketching a new design or meticulously snapping bricks together, I am driven by precision and a love for well-crafted excellence.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <h2 class="section-title">My Passions</h2>
+                    
+                    <table class="interests-grid" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <div class="interest-card">
+                                    <div class="icon">✏️</div>
+                                    <h3>Drawing</h3>
+                                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Expressing creativity and refining technique.</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="interest-card">
+                                    <div class="icon">🏎️</div>
+                                    <h3>Porsche Enthusiast</h3>
+                                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Admirer of automotive engineering and design.</p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="interest-card">
+                                    <div class="icon">🧱</div>
+                                    <h3>Lego Building</h3>
+                                    <p style="font-size: 0.85rem; color: var(--secondary-text);">Focusing on precision and structural assembly.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
 
-        <footer class="footer">
-            Driven by creativity and precision.
-        </footer>
+                </main>
+            </td>
+        </tr>
 
-    </div>
+        <tr>
+            <td>
+                <footer class="footer">
+                    Driven by creativity and precision.
+                </footer>
+            </td>
+        </tr>
+
+    </table>
 
 </body>
 </html>
