@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nino Emmanuel Erediano | Explorer, Creator, Gamer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            
+            --bg-start: #E0FFFF; 
+            --bg-end: #E6E6FA;   
+            --card-base: #FFFFFF;
+            --accent-green: #2E8B57; 
+            --accent-tan: #B8860B; 
+            --text-dark: #333333;
+            --text-medium: #555555;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 850px;
+            background: var(--card-base);
+            box-shadow: 0 15px 45px var(--shadow-color);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        
+        .main-header {
+            background: linear-gradient(90deg, var(--accent-green) 0%, #6B8E23 100%); 
+            padding: 40px 30px 20px;
+            text-align: center;
+            color: var(--card-base);
+            position: relative;
+        }
+
+        .avatar-frame {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            padding: 5px;
+            background: var(--card-base);
+            box-shadow: 0 0 0 5px var(--accent-tan);
+        }
+
+        .avatar-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .main-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .main-header .subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--bg-start);
+            margin-top: 5px;
+        }
+
+        
+        .content-layout {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .left-panel {
+            width: 40%;
+            padding: 40px;
+            background-color: #F8F8FF; 
+            vertical-align: top;
+            border-right: 1px solid #eee;
+        }
+
+        .right-panel {
+            width: 60%;
+            padding: 40px;
+            vertical-align: top;
+        }
+
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--accent-green);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--accent-tan);
+        }
+
+        
+        .hobby-card {
+            background-color: var(--card-base);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .hobby-card h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: var(--accent-tan);
+            margin-top: 0;
+        }
+
+        .hobby-card p {
+            font-size: 0.95rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+        
+        
+        .bio-text {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: var(--text-medium);
+        }
+        
+        .bio-text strong {
+            color: var(--accent-green);
+            font-weight: 700;
+        }
+
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 25px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        
+        @media (max-width: 768px) {
+            .content-layout, .content-layout tr {
+                display: block;
+            }
+            .left-panel, .right-panel {
+                width: 100%;
+                padding: 30px 20px;
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+            .main-header { padding: 30px 20px 15px; }
+            .main-header h1 { font-size: 2rem; }
+            .section-title { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        
+        <header class="main-header">
+            <div class="avatar-frame">
+                <img src="https://placehold.co/120x120/2E8B57/FFFFFF?text=N+E" alt="Nino Emmanuel Erediano Profile Picture">
+            </div>
+            <h1>Nino Emmanuel Erediano</h1>
+            <p class="subtitle">Explorer, Creator, Gamer</p>
+        </header>
+
+        <table class="content-layout" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="left-panel">
+                    <h2 class="section-title">My Hobbies & Focus</h2>
+
+                    <div class="hobby-card">
+                        <h3><span style="color: var(--accent-tan);">🏕️</span> Annual Camping</h3>
+                        <p>A valued tradition to disconnect and spend quality time with family and friends once a year, fostering connection and enjoying the great outdoors.</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <h3><span style="color: var(--accent-tan);">🚶</span> Mindful Walking</h3>
+                        <p>Regular walks are essential for mental clarity, helping to clear my mind and enjoy the refreshing sensation of a cold breeze, bringing balance to the day.</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <h3><span style="color: var(--accent-tan);">🎨</span> Creative Drawing</h3>
+                        <p>Drawing is a creative outlet and a vital tool for improving focus. It’s a deliberate effort to dedicate time away from screens and games, enhancing imagination and skill.</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <h3><span style="color: var(--accent-tan);">🎮</span> Video Gaming</h3>
+                        <p>Gaming provides a focused, engaging escape when boredom hits, but I ensure it remains a balanced activity, often countered by my creative pursuits.</p>
+                    </div>
+
+                </td>
+
+                <td class="right-panel">
+                    <h2 class="section-title">What I Do</h2>
+                    
+                    <div class="video-container">
+                        
+                        <iframe src="https://www.youtube.com/embed/5T6p7m2K42c" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="bio-text">
+                        <p>
+                            I currently work as a <strong>Digital Content Specialist</strong>, where I blend analytical thinking with creative execution. My professional life, much like my hobbies, requires a constant balance between structured logic and expressive freedom.
+                        </p>
+                        <p>
+                            In my role, I manage content calendars and strategy, but I thrive most when I get to utilize my creative side—designing visuals or drafting compelling narratives. This duality is reflected in my personal life: I need the collective warmth of <strong>camping with friends</strong> and the isolating, **mindful focus of walking and drawing.**
+                        </p>
+                        <p>
+                            I believe true productivity comes from **intentional breaks**; the focused nature of video games, when needed, acts as a reset button, allowing me to return to my professional and creative goals with renewed vigor.
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>
