@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creslyn | Student, Reader & Writer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --light-bg: #F0F8FF; 
+            --pale-blue: #D6E8F6;
+            --main-blue: #4A90E2; 
+            --dark-blue: #1A72C8;
+            --text-dark: #1D3557;
+            --text-light: #457B9D;
+            --aqua: #00FFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 800px;
+            background-color: var(--pale-blue);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border-collapse: collapse;
+        }
+        
+        .profile-container table, .profile-container tr, .profile-container td {
+            width: 100%;
+            border-collapse: collapse;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header-cell {
+            background: linear-gradient(135deg, var(--pale-blue) 0%, var(--main-blue) 100%);
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header-cell h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin: 0;
+            color: var(--text-dark);
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+        
+        .header-cell p {
+            font-size: 1.1rem;
+            margin-top: 5px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .avatar-frame {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            padding: 4px;
+            border: 4px solid var(--text-dark);
+            box-shadow: 0 0 20px rgba(74, 144, 226, 0.7);
+            background-color: var(--light-bg);
+        }
+
+        .avatar-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .content-area {
+            padding: 40px;
+            background-color: var(--light-bg);
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: var(--dark-blue);
+            border-left: 5px solid var(--main-blue);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .bio-text p {
+            line-height: 1.7;
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .bio-text strong {
+            color: var(--dark-blue);
+            font-weight: 700;
+        }
+
+        .interests-grid-row td {
+            padding: 10px;
+            vertical-align: top;
+            width: 33.33%; 
+        }
+        
+        .interests-grid-row {
+            display: flex; 
+            gap: 20px;
+        }
+        
+        .interest-card-cell {
+            flex: 1; 
+            padding: 0;
+        }
+
+        .interest-card {
+            background-color: var(--main-blue);
+            color: var(--light-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--dark-blue);
+            text-align: center;
+            height: 100%;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .interest-card:hover {
+            background-color: var(--dark-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(29, 53, 87, 0.4);
+        }
+
+        .interest-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--aqua);
+        }
+
+        .interest-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin: 0 0 5px;
+        }
+        
+        .interest-card p {
+            font-size: 0.9rem;
+            color: var(--pale-blue);
+            margin: 0;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .footer-cell {
+            background-color: var(--dark-blue);
+            color: var(--pale-blue);
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 600px) {
+            .header-cell {
+                padding: 30px 20px;
+            }
+            .content-area {
+                padding: 30px 20px;
+            }
+            .interests-grid-row {
+                flex-direction: column;
+            }
+            .interests-grid-row td {
+                width: 100%;
+                padding: 0 0 20px 0;
+            }
+            .interests-grid-row td:last-child {
+                padding-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <table class="profile-container" cellpadding="0" cellspacing="0">
+        
+        <tr>
+            <td class="header-cell">
+                <header>
+                    <div class="avatar-frame">
+                        <img src="https://res.cloudinary.com/dyplsjcyi/image/upload/v1765795095/creslyn_halmtw.jpg" alt="Creslyn Profile Picture">
+                    </div>
+                    <h1>Creslyn</h1>
+                    <p>Student, Reader & Writer</p>
+                </header>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <main class="content-area">
+                    
+                    <h2 class="section-title">Video & Introduction</h2>
+                    
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+
+                    <h2 class="section-title">About Me</h2>
+                    
+                    <table class="bio-text" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <p>
+                                    Hi! My name is <strong>Creslyn</strong>. I am a student who enjoys learning new things through <strong>reading and writing</strong>. I like expressing myself through words and exploring different stories and ideas. 
+                                </p>
+                                <p>
+                                    In my free time, I enjoy <strong>listening to music</strong>, watching videos, and spending time with my <strong>friends</strong>. My world revolves around curiosity, creativity, and connection.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <h2 class="section-title">My Passions</h2>
+                    
+                    <table class="interests-table" cellpadding="0" cellspacing="0">
+                        <tr class="interests-grid-row">
+                            <td class="interest-card-cell">
+                                <div class="interest-card">
+                                    <div class="icon">📚</div>
+                                    <h3>Reading & Learning</h3>
+                                    <p>Exploring new worlds and knowledge.</p>
+                                </div>
+                            </td>
+                            <td class="interest-card-cell">
+                                <div class="interest-card">
+                                    <div class="icon">✍️</div>
+                                    <h3>Writing & Expression</h3>
+                                    <p>Crafting stories and sharing ideas.</p>
+                                </div>
+                            </td>
+                            <td class="interest-card-cell">
+                                <div class="interest-card">
+                                    <div class="icon">🎧</div>
+                                    <h3>Media Enjoyment</h3>
+                                    <p>Music, videos, and shared moments.</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </main>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="footer-cell">
+                <footer class="footer">
+                    Powered by curiosity and creativity. &copy; 2024 Creslyn.
+                </footer>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
